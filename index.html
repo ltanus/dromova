@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GoMove — Your Health. Your Science.</title>
-<meta name="description" content="GoMove is the AI coach that lives in WhatsApp. Tracks everything. Connects your whole health team. 24/7.">
+<title>Dromova — Your Health. Your Science.</title>
+<meta name="description" content="Dromova is the AI coach that lives in WhatsApp. Tracks everything. Connects your whole health team. 24/7.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700;1,800&family=Barlow:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -238,12 +238,12 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
 .logos-section{padding:60px 56px;border-bottom:1px solid var(--border)}
 .logos-inner{max-width:1100px;margin:0 auto}
 .logos-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--off);text-align:center;margin-bottom:32px}
-.logos-grid{display:flex;gap:0;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border)}
-.logo-item{flex:1;padding:28px 20px;border-right:1px solid var(--border);display:flex;align-items:center;justify-content:center;filter:brightness(.5);transition:filter .2s;cursor:default}
+.logos-grid{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--border)}
+.logo-item{flex:0 0 auto;min-width:180px;padding:28px 32px;border-right:1px solid var(--border);display:flex;align-items:center;justify-content:center;filter:brightness(1);transition:filter .2s;cursor:default}
 .logo-item:last-child{border-right:none}
-.logo-item:hover{filter:brightness(1)}
-.logo-item svg{height:28px;width:auto}
-.logo-item img{height:28px;width:auto}
+.logo-item:hover{filter:brightness(1.2)}
+.logo-item svg{height:40px;width:auto}
+.logo-item img{height:40px;width:auto}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
@@ -263,7 +263,7 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
 <body>
 
 <nav id="nav">
-  <div class="nav-logo">Go<span>Move</span></div>
+  <a href="#"><img src="logo_escrita.png" alt="Dromova" style="height:28px;display:block"></a>
   <div class="nav-links">
     <a href="#how">How it works</a>
     <a href="#for-you">Who it's for</a>
@@ -273,63 +273,38 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
   <a href="#start" class="nav-cta">Get started</a>
 </nav>
 
-<!-- VIDEO HERO -->
-<div class="hero-video-section">
-  <video autoplay muted loop playsinline>
-    <source src="hero-video.mp4" type="video/mp4">
-  </video>
-  <div class="hero-video-overlay"></div>
-  <div class="hero-video-content">
-    <div class="hero-badge"><span class="badge-dot"></span>AI-powered · WhatsApp · 24/7</div>
-    <h1 class="hero-title">
-      <span class="t1">Your Health.</span>
-      <span class="t2">Your</span>
-      <span class="t3">Science.</span>
-    </h1>
-    <p class="hero-sub">From first workout to race day — <strong>one AI coach</strong> that reads everything, connects your whole health team, and never goes offline.</p>
-    <div class="hero-actions">
-      <a href="#start" class="btn-primary">Start free →</a>
-      <a href="#how" class="btn-outline">How it works</a>
-    </div>
-  </div>
-  <div class="scroll-down" onclick="document.getElementById('details').scrollIntoView({behavior:'smooth'})">
-    <div class="scroll-line-anim"></div>
-    <span>Scroll</span>
-  </div>
-</div>
-
-<!-- DETAIL HERO WITH PHONE -->
-<div id="details">
-<div class="hero">
-  <div class="hero-grid"></div>
+<div class="hero" style="position:relative">
+  <div style="position:absolute;inset:0;background-image:url('site_03.png');background-size:cover;background-position:center right;opacity:.5;z-index:0"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,10,12,.92) 45%,rgba(10,10,12,.4) 100%);z-index:1"></div>
+  <div class="hero-grid" style="z-index:1"></div>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
-  <div class="hero-left">
+  <div class="hero-left" style="position:relative;z-index:2">
     <div class="hero-badge"><span class="badge-dot"></span>AI-powered · WhatsApp · 24/7</div>
     <h1 class="hero-title">
       <span class="t1">Your Health.</span>
       <span class="t2">Your</span>
       <span class="t3">Science.</span>
     </h1>
-    <p class="hero-sub">From first workout to race day — <strong>one AI coach</strong> that reads everything, connects your whole health team, and never goes offline.</p>
+    <p class="hero-sub">From first workout to race day — <strong>one AI coach</strong> that connects to your apps automatically, reads everything, and never goes offline.</p>
     <div class="hero-actions">
       <a href="#start" class="btn-primary">Start free →</a>
       <a href="#how" class="btn-outline">How it works</a>
     </div>
     <div class="hero-stats">
       <div class="hstat"><div class="hstat-num">24<em>/7</em></div><div class="hstat-label">Always on</div></div>
-      <div class="hstat"><div class="hstat-num">∞</div><div class="hstat-label">Apps read</div></div>
+      <div class="hstat"><div class="hstat-num">∞</div><div class="hstat-label">Apps synced</div></div>
       <div class="hstat"><div class="hstat-num">0</div><div class="hstat-label">Apps to install</div></div>
     </div>
   </div>
-  <div class="hero-right">
+  <div class="hero-right" style="position:relative;z-index:2">
     <div class="wapp-wrap">
       <div class="wapp-status-bar"><span>9:41</span><span>▐▐▐ ◉</span></div>
       <div class="wapp-header">
         <div class="wapp-back">‹</div>
         <div class="wapp-av">🏃</div>
         <div class="wapp-info">
-          <div class="wapp-name">GoMove</div>
+          <div class="wapp-name">Dromova</div>
           <div class="wapp-online">online</div>
         </div>
         <div class="wapp-icons"><span>📹</span><span>📞</span></div>
@@ -370,14 +345,61 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
     </div>
   </div>
 </div>
-</div>
-
 
   <div class="stats-inner">
     <div class="stat-item reveal"><span class="stat-num">24/7</span><span class="stat-label">Always active</span></div>
-    <div class="stat-item reveal d1"><span class="stat-num">∞</span><span class="stat-label">Apps & devices</span></div>
+    <div class="stat-item reveal d1"><span class="stat-num">∞</span><span class="stat-label">Apps connected</span></div>
     <div class="stat-item reveal d2"><span class="stat-num">4+</span><span class="stat-label">Professionals</span></div>
-    <div class="stat-item reveal d3"><span class="stat-num">0</span><span class="stat-label">New apps needed</span></div>
+    <div class="stat-item reveal d3"><span class="stat-num">1x</span><span class="stat-label">Setup. Forever.</span></div>
+  </div>
+</div>
+
+
+<div style="border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:#0a0a0c">
+  <div style="max-width:1300px;margin:0 auto;padding:80px 56px">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#ff4d00;margin-bottom:16px;text-align:center">Dromova intelligence</div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,5vw,68px);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-1px;margin-bottom:56px;color:#f0f0f0;text-align:center">The data behind <em style="color:#ff4d00;font-style:italic">every recommendation.</em></h2>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(255,255,255,.07);margin-bottom:2px">
+      <div style="background:#111114;padding:40px 28px;text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#ff4d00;line-height:1;letter-spacing:-2px">175B+</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#f0f0f0;margin-top:8px">AI Parameters</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888894;margin-top:6px;letter-spacing:1px">Anthropic Claude</div>
+      </div>
+      <div style="background:#111114;padding:40px 28px;text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#ff4d00;line-height:1;letter-spacing:-2px">35M+</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#f0f0f0;margin-top:8px">Biomedical Studies</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888894;margin-top:6px;letter-spacing:1px">PubMed via Anthropic</div>
+      </div>
+      <div style="background:#111114;padding:40px 28px;text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#ff4d00;line-height:1;letter-spacing:-2px">83%</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#f0f0f0;margin-top:8px">Medical Accuracy</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888894;margin-top:6px;letter-spacing:1px">Protocol QA Benchmark</div>
+      </div>
+      <div style="background:#111114;padding:40px 28px;text-align:center">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:#ff4d00;line-height:1;letter-spacing:-2px">24/7</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#f0f0f0;margin-top:8px">Active Monitoring</div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;color:#888894;margin-top:6px;letter-spacing:1px">Real-time · WhatsApp</div>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.07)">
+      <div style="background:#111114;padding:36px 28px">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#ff4d00;margin-bottom:12px">Training data</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;color:#f0f0f0;margin-bottom:8px">World-class medical knowledge</div>
+        <div style="font-size:13px;color:#888894;line-height:1.65;font-weight:300">Trained on the open web, licensed scientific datasets, PubMed biomedical literature, and peer-reviewed sports science research — updated through 2025.</div>
+      </div>
+      <div style="background:#111114;padding:36px 28px">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#ff4d00;margin-bottom:12px">Real-time data</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;color:#f0f0f0;margin-bottom:8px">Your biometrics. Live.</div>
+        <div style="font-size:13px;color:#888894;line-height:1.65;font-weight:300">Dromova connects to Garmin, Strava, Apple Health and Samsung Health — reading your training load, heart rate, sleep and recovery in real time.</div>
+      </div>
+      <div style="background:#111114;padding:36px 28px">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#ff4d00;margin-bottom:12px">Privacy & safety</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;color:#f0f0f0;margin-bottom:8px">HIPAA-ready AI infrastructure</div>
+        <div style="font-size:13px;color:#888894;line-height:1.65;font-weight:300">Built on Anthropic Claude — the only AI with Constitutional AI safety training, deployed in 55,000+ healthcare professionals worldwide.</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -385,13 +407,13 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
   <div class="how-layout">
     <div>
       <div class="section-tag reveal">How it works</div>
-      <h2 class="section-title reveal">Talk.<br><em>GoMove</em><br>handles<br>the rest.</h2>
-      <p class="section-sub reveal">Send anything to WhatsApp — voice notes, Strava screenshots, blood test photos, or just how you feel. GoMove reads it all and acts.</p>
+      <h2 class="section-title reveal">Talk.<br><em>Dromova</em><br>handles<br>the rest.</h2>
+      <p class="section-sub reveal">Connect your apps once and Dromova reads everything automatically — training data, sleep, heart rate, biomarkers. Add voice notes or messages anytime for context.</p>
       <div class="how-steps">
-        <div class="how-step reveal"><div class="step-n">01</div><div><div class="step-title">Send anything. Any format.</div><div class="step-desc">Text, voice notes, app screenshots, blood test photos — all on WhatsApp. Nothing to install. No logins. No friction.</div></div></div>
-        <div class="how-step reveal"><div class="step-n">02</div><div><div class="step-title">AI reads and remembers.</div><div class="step-desc">GoMove builds your full picture — training, nutrition, biomarkers, mood — and keeps cross-referencing over time.</div></div></div>
-        <div class="how-step reveal"><div class="step-n">03</div><div><div class="step-title">Your plan adapts.</div><div class="step-desc">"Had a rough week." GoMove recalibrates training load, adjusts recommendations, and checks in the next morning.</div></div></div>
-        <div class="how-step reveal"><div class="step-n">04</div><div><div class="step-title">GoMove reaches out first.</div><div class="step-desc">"Good morning — how's the knee?" GoMove initiates check-ins and alerts your professionals when something needs attention.</div></div></div>
+        <div class="how-step reveal"><div class="step-n">01</div><div><div class="step-title">Connect your apps once.</div><div class="step-desc">Link Garmin, Strava, Apple Health, Samsung Health and more in seconds. Dromova reads your data automatically — training, sleep, heart rate, biomarkers — 24/7 in real time. No manual input. No screenshots.</div></div></div>
+        <div class="how-step reveal"><div class="step-n">02</div><div><div class="step-title">AI reads and remembers.</div><div class="step-desc">Dromova builds your full picture — training, nutrition, biomarkers, mood — and keeps cross-referencing over time.</div></div></div>
+        <div class="how-step reveal"><div class="step-n">03</div><div><div class="step-title">Your plan adapts.</div><div class="step-desc">"Had a rough week." Dromova recalibrates training load, adjusts recommendations, and checks in the next morning.</div></div></div>
+        <div class="how-step reveal"><div class="step-n">04</div><div><div class="step-title">Dromova reaches out first.</div><div class="step-desc">"Good morning — how's the knee?" Dromova initiates check-ins and alerts your professionals when something needs attention.</div></div></div>
       </div>
     </div>
     <div style="position:sticky;top:100px" class="reveal">
@@ -400,15 +422,15 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
         <div class="wapp-header">
           <div class="wapp-back">‹</div>
           <div class="wapp-av">🏃</div>
-          <div class="wapp-info"><div class="wapp-name">GoMove</div><div class="wapp-online">online</div></div>
+          <div class="wapp-info"><div class="wapp-name">Dromova</div><div class="wapp-online">online</div></div>
           <div class="wapp-icons"><span>📹</span><span>📞</span></div>
         </div>
         <div class="wapp-body">
           <div class="wapp-msg wapp-in">
-            <div class="wapp-bubble in">Good morning 👋 Race in 3 weeks. How did you sleep?<div class="wapp-time">7:02</div></div>
+            <div class="wapp-bubble in">Good morning 👋 Race in 3 weeks. Your Garmin shows recovery 82% — solid night! Ready for today's tempo run?<div class="wapp-time">7:02</div></div>
           </div>
           <div class="wapp-msg wapp-out">
-            <div class="wapp-bubble out">7.5h. Garmin says recovery 82% 💪<div class="wapp-time">7:08 <span class="wapp-ticks">✓✓</span></div></div>
+            <div class="wapp-bubble out">Let's go! 🔥<div class="wapp-time">7:08 <span class="wapp-ticks">✓✓</span></div></div>
           </div>
           <div class="wapp-msg wapp-in">
             <div class="wapp-bubble in">Solid. Today's tempo run:
@@ -432,27 +454,29 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
   </div>
 </section>
 
-<div class="dark-section" id="for-you">
-  <div class="dark-inner">
+<div class="dark-section" id="for-you" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:url('site_02.png');background-size:cover;background-position:center top;opacity:.55;z-index:0"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(17,17,20,.75) 30%,rgba(17,17,20,.25) 100%);z-index:1"></div>
+  <div class="dark-inner" style="position:relative;z-index:2">
     <div class="section-tag reveal">Who it's for</div>
     <h2 class="section-title reveal">Anyone who <em>moves.</em></h2>
     <div class="for-grid">
       <div class="for-card reveal">
         <div class="for-top"><div class="for-icon">🎯</div><div class="for-tag">Solo athlete</div></div>
         <div class="for-title">No team needed</div>
-        <div class="for-desc">No personal trainer. No nutritionist. GoMove is your only coach — checks in daily, adjusts your plan, flags risks, keeps you accountable 24/7.</div>
+        <div class="for-desc">No personal trainer. No nutritionist. Dromova connects to your apps automatically and is your only coach — checks in daily, adjusts your plan, flags risks, keeps you accountable 24/7.</div>
         <div class="for-bg">01</div>
       </div>
       <div class="for-card reveal d1">
         <div class="for-top"><div class="for-icon">🏁</div><div class="for-tag">First-timers</div></div>
         <div class="for-title">First race.<br>Zero experience.</div>
-        <div class="for-desc">Signed up for a 10K but never run? GoMove builds your plan from scratch, adapts it weekly, and gets you to the finish line.</div>
+        <div class="for-desc">Signed up for a 10K but never run? Dromova builds your plan from scratch, adapts it weekly, and gets you to the finish line.</div>
         <div class="for-bg">02</div>
       </div>
       <div class="for-card reveal d2">
         <div class="for-top"><div class="for-icon">👥</div><div class="for-tag">With a care team</div></div>
         <div class="for-title">Everyone<br>in sync.</div>
-        <div class="for-desc">Invite your trainer, nutritionist, physio, and doctor as collaborators. GoMove keeps everyone updated in real time.</div>
+        <div class="for-desc">Invite your trainer, nutritionist, physio, and doctor as collaborators. Dromova keeps everyone updated in real time.</div>
         <div class="for-bg">03</div>
       </div>
     </div>
@@ -461,19 +485,28 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
 
 <div class="logos-section">
   <div class="logos-inner">
-    <div class="logos-label">Reads data from</div>
+    <div class="logos-label">Automatic integration with</div>
     <div class="logos-grid">
       <div class="logo-item" title="Strava">
-        <svg viewBox="0 0 24 24" fill="#FC4C02" xmlns="http://www.w3.org/2000/svg"><path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"/></svg>
+        <svg viewBox="0 0 140 44" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28 40l-5.5-10.8H15L28 44l13.5-14.8h-8.5M18.5 25.6l7.5 14.8h11L28 0l-18.5 25.6h8.5" fill="#FC4C02"/>
+          <text x="50" y="30" font-family="Arial Black" font-weight="900" font-size="22" fill="#FC4C02">STRAVA</text>
+        </svg>
       </div>
       <div class="logo-item" title="Garmin">
-        <svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="Arial Black" font-weight="900" font-size="26" fill="#007CC3">GARMIN</text></svg>
+        <svg viewBox="0 0 150 36" xmlns="http://www.w3.org/2000/svg"><text y="28" font-family="Arial Black" font-weight="900" font-size="28" fill="#007CC3">GARMIN</text></svg>
       </div>
       <div class="logo-item" title="Apple Health">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#FF2D55" d="M11.5 2.5C9.5 2.5 8 4 8 6c0 1.2.6 2.3 1.5 3H9c-3.9 0-7 3.1-7 7s3.1 7 7 7h6c3.9 0 7-3.1 7-7s-3.1-7-7-7h-.5c.9-.7 1.5-1.8 1.5-3 0-2-1.5-3.5-3.5-3.5zm-1 8h2l1 4H9.5l1-4z"/><path fill="#FF2D55" d="M12 14.5l1.5 2.5h-3l1.5-2.5z"/></svg>
+        <svg viewBox="-5 0 175 44" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4C12 4 9 7 9 11c0 2.5 1.3 4.7 3.2 6H11C4.4 17 0 21.4 0 28s4.4 11 11 11h12c6.6 0 11-4.4 11-11s-4.4-11-11-11h-1.2C23.7 15.7 25 13.5 25 11c0-4-3-7-7-7H16z" fill="#FF2D55"/>
+          <text x="32" y="30" font-family="Arial" font-weight="700" font-size="18" fill="#ffffff">Apple Health</text>
+        </svg>
       </div>
       <div class="logo-item" title="Samsung Health">
-        <svg viewBox="0 0 100 30" xmlns="http://www.w3.org/2000/svg"><text y="24" font-family="Arial" font-weight="700" font-size="18" fill="#1428A0">Samsung</text></svg>
+        <svg viewBox="0 0 175 36" xmlns="http://www.w3.org/2000/svg">
+          <text y="26" font-family="Arial" font-weight="700" font-size="20" fill="#1428A0">Samsung</text>
+          <text x="108" y="26" font-family="Arial" font-weight="400" font-size="20" fill="#ffffff">Health</text>
+        </svg>
       </div>
       <div class="logo-item" title="Powered by Claude AI" style="gap:8px;flex-direction:column">
         <span style="font-family:'DM Mono',monospace;font-size:9px;color:rgba(255,255,255,.3);letter-spacing:1px;text-transform:uppercase">Powered by</span>
@@ -485,8 +518,8 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
 
 <div class="int-section">
   <div class="int-header">
-    <div class="int-eyebrow">Works with everything</div>
-    <div class="int-title">Send the screenshot. <em>We read it.</em></div>
+    <div class="int-eyebrow">Automatic integrations</div>
+    <div class="int-title">Connect once. <em>Reads everything.</em></div>
   </div>
   <div class="int-track">
     <div class="int-row">
@@ -543,7 +576,7 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
   <div class="science-inner">
     <div class="section-tag reveal">Evidence-based</div>
     <h2 class="section-title reveal">Built on <em>real science.</em></h2>
-    <p class="section-sub reveal">GoMove's recommendations are grounded in peer-reviewed research from the world's leading health institutions.</p>
+    <p class="section-sub reveal">Dromova's recommendations are grounded in peer-reviewed research from the world's leading health institutions.</p>
     <div class="science-layout">
       <div class="science-claims">
         <div class="science-claim reveal">
@@ -590,23 +623,25 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
             <div class="sci-source">WHO, 2022</div>
           </div>
         </div>
-        <p style="font-size:11px;color:rgba(255,255,255,.18);margin-top:16px;line-height:1.7;text-align:center">GoMove is a physical conditioning support tool and does not replace professional medical evaluation or prescription.</p>
+        <p style="font-size:11px;color:rgba(255,255,255,.18);margin-top:16px;line-height:1.7;text-align:center">Dromova is a physical conditioning support tool and does not replace professional medical evaluation or prescription.</p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="dark-section" id="pros">
-  <div class="dark-inner">
+<div class="dark-section" id="pros" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background-image:url('site_01.png');background-size:cover;background-position:center;opacity:.55;z-index:0"></div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to left,rgba(17,17,20,.75) 30%,rgba(17,17,20,.25) 100%);z-index:1"></div>
+  <div class="dark-inner" style="position:relative;z-index:2">
     <div class="pro-layout">
       <div>
         <div class="section-tag reveal">For professionals</div>
-        <h2 class="section-title reveal">GoMove<br>doesn't<br>replace <em>you.</em></h2>
-        <p class="section-sub reveal">GoMove amplifies your work — giving you real-time context you never had before. <strong>Your client talks once. You always know.</strong></p>
-        <p class="section-sub reveal" style="margin-top:16px">GoMove is a physical conditioning support tool. It does not diagnose or prescribe.</p>
+        <h2 class="section-title reveal">Dromova<br>doesn't<br>replace <em>you.</em></h2>
+        <p class="section-sub reveal">Dromova amplifies your work — giving you real-time context you never had before. <strong>Your client talks once. You always know.</strong></p>
+        <p class="section-sub reveal" style="margin-top:16px">Dromova is a physical conditioning support tool. It does not diagnose or prescribe.</p>
       </div>
       <div class="pro-grid reveal">
-        <div class="pro-card"><span class="pro-emoji">🏋️</span><div class="pro-role">Personal Trainer</div><div class="pro-title">Full context</div><div class="pro-desc">Know what they ate, how they slept, how they felt — before they walk in.</div></div>
+        <div class="pro-card"><span class="pro-emoji">🏋️</span><div class="pro-role">Personal Trainer</div><div class="pro-title">Full context</div><div class="pro-desc">Dromova syncs your client's apps automatically. Know their training load, sleep and recovery before they walk in.</div></div>
         <div class="pro-card"><span class="pro-emoji">🥗</span><div class="pro-role">Nutritionist</div><div class="pro-title">Real data</div><div class="pro-desc">Real-time food logging vs. what they remember at the monthly consult.</div></div>
         <div class="pro-card"><span class="pro-emoji">🦴</span><div class="pro-role">Physiotherapist</div><div class="pro-title">Early alerts</div><div class="pro-desc">Get notified on recurring pain before it becomes a real injury.</div></div>
         <div class="pro-card"><span class="pro-emoji">🩺</span><div class="pro-role">Physician</div><div class="pro-title">Full picture</div><div class="pro-desc">Blood results cross-referenced with training load, sleep, and nutrition.</div></div>
@@ -615,25 +650,83 @@ footer{padding:40px 56px;border-top:1px solid var(--border);display:flex;justify
   </div>
 </div>
 
+
+<section style="padding:100px 56px;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);background:#111114">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#ff4d00;margin-bottom:16px">Global availability</div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:clamp(44px,5.5vw,72px);font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-1px;margin-bottom:12px;color:#f0f0f0">Available <em style="color:#ff4d00;font-style:italic">worldwide.</em></h2>
+    <p style="font-size:17px;font-weight:300;color:#888894;line-height:1.7;margin-bottom:48px">Wherever you train, Dromova is with you. Works in any language, any timezone, any WhatsApp number.</p>
+    <div id="dromova-map" style="width:100%;border-radius:12px;overflow:hidden;background:#0a0a0c;border:1px solid rgba(255,255,255,.07)"></div>
+    <div style="display:flex;gap:24px;margin-top:20px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:#888894;letter-spacing:1px;text-transform:uppercase">
+        <span style="width:12px;height:12px;border-radius:2px;background:#ff4d00;display:inline-block"></span>Available now
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'DM Mono',monospace;font-size:11px;color:#888894;letter-spacing:1px;text-transform:uppercase">
+        <span style="width:12px;height:12px;border-radius:2px;background:#2a2a2e;border:1px solid rgba(255,255,255,.1);display:inline-block"></span>Coming soon
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<script>
+(function(){
+  const available = new Set([
+    "032","076","152","170","218","604","858","862","840","124","484","188","320","340","558","591","600","68","858",
+    "250","276","380","724","826","620","348","040","756","528","056","352","372","578","208","246","752","703","703","705",
+    "616","203","703","703","804","112",
+    "682","784","368","400","414","48","512","972","760","422","275","792","364","376","818","504","012","788",
+    "036","392","156","356","360","608","458","764","704","410","050","144","524","586","144","462","144","704","784"
+  ]);
+
+  const svg = d3.select('#dromova-map').append('svg')
+    .attr('viewBox','0 0 960 500')
+    .attr('width','100%')
+    .style('display','block');
+
+  svg.append('rect').attr('width',960).attr('height',500).attr('fill','#0a0a0c');
+
+  const projection = d3.geoNaturalEarth1().scale(153).translate([480,250]);
+  const path = d3.geoPath(projection);
+
+  d3.json('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json').then(world => {
+    const countries = topojson.feature(world, world.objects.countries).features;
+    svg.selectAll('path.country')
+      .data(countries)
+      .join('path')
+      .attr('class','country')
+      .attr('d', path)
+      .attr('fill', d => available.has(d.id) ? '#ff4d00' : '#1e1e24')
+      .attr('stroke','#0a0a0c')
+      .attr('stroke-width','0.5')
+      .style('opacity', d => available.has(d.id) ? 0.85 : 1);
+  });
+})();
+</script>
+
 <div class="cta-section" id="start">
   <div class="cta-bg"></div>
   <div class="cta-grid"></div>
-  <div class="section-tag reveal" style="text-align:center">Start today</div>
+  <div style="text-align:center;margin-bottom:24px">
+  <img src="logo_logo.png" alt="D" style="height:56px;opacity:.85">
+</div>
+<div class="section-tag reveal" style="text-align:center">Start today</div>
   <h2 class="cta-title reveal">Your next<br><em>move</em><br><span class="outline">starts here.</span></h2>
   <p class="cta-sub reveal">30 days free. No credit card.</p>
   <div class="cta-form reveal">
     <input type="text" class="cta-input" placeholder="Your WhatsApp number" id="wppInput">
     <button class="cta-btn" onclick="signup()">Start →</button>
   </div>
-  <p class="cta-legal reveal">Physical conditioning support tool. Does not replace medical or nutritional professional guidance.<br>Your data is protected and never sold.</p>
+  <p class="cta-legal reveal">Physical conditioning support tool. Does not replace medical or nutritional professional guidance. Your data is protected, encrypted, and never sold.</p>
 </div>
 
 <footer>
-  <div class="footer-logo">Go<span>Move</span></div>
+  <img src="logo_escrita.png" alt="Dromova" style="height:22px;display:block">
   <div class="footer-links">
     <a href="#">Product</a><a href="#pros">Professionals</a><a href="#plans">Plans</a><a href="#">Privacy</a><a href="#">Terms</a>
   </div>
-  <div class="footer-copy">© 2026 GoMove</div>
+  <div class="footer-copy">© 2026 Dromova</div>
 </footer>
 
 <script>
