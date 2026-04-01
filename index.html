@@ -983,9 +983,9 @@ footer{background:#060607;padding:40px 72px;display:flex;align-items:center;just
           <label>WhatsApp number</label>
           <div class="founding-form-phone">
             <select id="foundingCode" class="founding-form-phone-code">
-              <option value="1">🇺🇸 +1 USA</option>
+              <option value="1" selected>🇺🇸 +1 USA</option>
               <option value="1">🇨🇦 +1 Canada</option>
-              <option value="55" selected>🇧🇷 +55 Brazil</option>
+              <option value="55">🇧🇷 +55 Brazil</option>
               <option value="44">🇬🇧 +44 UK</option>
               <option value="49">🇩🇪 +49 Germany</option>
               <option value="33">🇫🇷 +33 France</option>
@@ -1094,32 +1094,63 @@ const obs = new IntersectionObserver(entries => {
 }, {threshold:.08});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Founding form
+// ── Founding form ──────────────────────────────────────────
+// IMPORTANTE: após o Thiago implantar o Apps Script,
+// substitua a URL abaixo pela URL gerada na implantação
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzb9L4WIeURD8xIXSDzch_FDkQaDBd32H92hEAiBIS9bbc6OAX77UCDRZVpVf8hCz7N/exec';
+
 function submitFounding() {
   const name = document.getElementById('foundingName').value.trim();
   const code = document.getElementById('foundingCode').value;
   const phone = document.getElementById('foundingPhone').value.trim();
-  if (!name || !phone) {
-    document.getElementById('foundingName').style.borderColor = !name ? 'var(--o)' : '';
-    document.getElementById('foundingPhone').style.borderColor = !phone ? 'var(--o)' : '';
-    return;
-  }
-  // Generate founding number
-  const base = 47;
-  const increment = Math.floor(Math.random() * 11) + 45; // 45-55
-  const num = base + increment;
+
+  // Validação
+  const nameEl = document.getElementById('foundingName');
+  const phoneEl = document.getElementById('foundingPhone');
+  nameEl.style.borderColor = '';
+  phoneEl.style.borderColor = '';
+  if (!name) { nameEl.style.borderColor = 'var(--o)'; nameEl.focus(); return; }
+  if (!phone) { phoneEl.style.borderColor = 'var(--o)'; phoneEl.focus(); return; }
+
+  // Gerar número de fundador
+  const currentSpots = parseInt(document.getElementById('spotsFilled').textContent) || 47;
+  const increment = Math.floor(Math.random() * 11) + 45;
+  const num = currentSpots + increment;
   const formatted = '#' + String(num).padStart(4, '0');
-  // Show success
+
+  // Desabilitar botão e mostrar loading
+  const btn = document.querySelector('.btn-founding-submit');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  // Enviar para Google Sheets via GET (evita CORS)
+  if (SCRIPT_URL !== 'COLE_AQUI_A_URL_DO_APPS_SCRIPT') {
+    const params = '?name=' + encodeURIComponent(name) +
+                   '&code=' + encodeURIComponent(code) +
+                   '&phone=' + encodeURIComponent(phone) +
+                   '&foundingNumber=' + encodeURIComponent(formatted);
+    const img = new Image();
+    img.src = SCRIPT_URL + params;
+  }
+
+  // Mostrar sucesso
   document.getElementById('foundingForm').style.display = 'none';
   document.getElementById('foundingSuccess').style.display = 'block';
   document.getElementById('successNum').textContent = formatted;
-  // Update counter
+
+  // Atualizar contador
   document.getElementById('spotsFilled').textContent = num;
   document.getElementById('foundingBar').style.width = (num / 10) + '%';
-  // Open WhatsApp with pre-filled message
-  const fullPhone = code + phone.replace(/[^0-9]/g,'');
-  const msg = encodeURIComponent('Hello, I want founding access to Dromova. My name is ' + name + ' and my founding number is ' + formatted);
-  setTimeout(() => { window.open('https://wa.me/16282657970?text=' + msg, '_blank'); }, 1200);
+
+  // Abrir WhatsApp com mensagem pré-preenchida
+  const msg = encodeURIComponent(
+    'Hello, I want founding access to Dromova.' +
+    ' My name is ' + name +
+    ' and my founding number is ' + formatted
+  );
+  setTimeout(() => {
+    window.open('https://wa.me/16282657970?text=' + msg, '_blank');
+  }, 1200);
 }
 
 // FAQ accordion
